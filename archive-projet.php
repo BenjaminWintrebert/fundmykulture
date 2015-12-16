@@ -1,17 +1,7 @@
 <?php get_header(); ?> 
-<div class="projets">   
-    <?php if (have_posts()): ?>     
-    <?php   while (have_posts()): the_post(); ?>      
-    <article class="projet">      
-        <?php the_post_thumbnail('thumbnail');?>        
-        <h1 class="title">         
-            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-        </h1>
-        <div class="content">
-            <?php the_content(); ?>      
-        </div>      
-    </article>     
-    <?php    endwhile;?>   
-    <?php endif;?> 
-</div> 
+<?php $loop = new WP_Query( array( 'post_type' => 'projet', 'posts_per_page' => -1 ) ); ?>
+<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+The stuff you want to loop goes in here
+<?php endwhile; wp_reset_query(); ?>
 <?php get_footer(); ?>
+
