@@ -12,15 +12,9 @@
 ?>
 
 	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'fundmykulture' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'fundmykulture' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'fundmykulture' ), 'fundmykulture', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer id="footer" class="fixed-bottom">
+	<div class="footer-container"><span class="fs-small">Copyright FundMyKulture</span></div>
+</footer>
 
 <?php wp_footer(); ?>
 

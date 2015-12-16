@@ -23,7 +23,7 @@
 <body <?php body_class(); ?>>
 
 	<header id="header" class="fixed">
-		<div class="logo"><span class="logo-site"></span></div>
+		<div class="logo-container"><span class="logo-site"></span></div>
 		<div class="col-50 t-left">
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="fs-medium ml10"><span class="logo-home"></span>Accueil</a>
 			</div>
