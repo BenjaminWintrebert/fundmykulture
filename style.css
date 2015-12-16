@@ -116,5 +116,16 @@ a {
 	margin-right: 5px;
 }
 
-/*********** CONTAINER *************/
+#container {
+    width:1024px;
+}
 
+.brick {
+    width:341px;
+    padding:0px 10px 15px 10px;
+}
+
+.brick .img_projet img{
+    width: 100%;
+    height: auto;
+}

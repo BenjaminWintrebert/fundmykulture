@@ -124,11 +124,13 @@ function fundmykulture_scripts() {
         wp_enqueue_script( 'comment-reply' );
     }
 
-    wp_enqueue_script("jquery");
-
-    wp_enqueue_script( 'masonry', '//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.2/masonry.pkgd.js' );
-
+    wp_enqueue_script('jquery');
 }
+
+function mason_script() {
+    wp_enqueue_script( 'jquery-masonry' );
+}
+add_action( 'wp_enqueue_scripts', 'mason_script' );
 
 add_action('init', 'my_custom_init');
 

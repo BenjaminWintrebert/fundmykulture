@@ -4,4 +4,3 @@
 The stuff you want to loop goes in here
 <?php endwhile; wp_reset_query(); ?>
 <?php get_footer(); ?>
-
