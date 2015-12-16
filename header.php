@@ -25,12 +25,12 @@
 	<header id="header" class="fixed">
 		<div class="logo fs-medium">LOGO</div>
 		<div class="col-50 t-left">
-	<div class="fs-medium"><span class="logo-home"></span>Accueil</div>
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="fs-medium ml10"><span class="logo-home"></span>Accueil</a>
 			</div>
 	<!--<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo"><div class="brand fs-medium"><?php bloginfo( 'name' ); ?></div></a>-->
 	<div class="col-50 t-right">
-		<span class="fs-medium"><span class="logo-search"></span>Recherche</span>
-		<span class="fs-medium"><span class="logo-login"></span>Se connecter</span>
+		<span class="logo-search"></span>Recherche</span><input type="text" class="fs-medium" placeholder="Rechercher">
+		<span class="fs-medium ml10 mr10"><span class="logo-login"></span>Se connecter</span>
 		</div>
 		</header>
 

@@ -47,6 +47,23 @@ body{
 	text-align: right;
 }
 
+.mr5 {
+	margin-right: 5px;
+}
+
+.ml10 {
+	margin-left: 10px;
+}
+
+.mr10 {
+	margin-right: 10px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
 /*********** HEADER *************/
 
 #wpadminbar {
@@ -63,13 +80,14 @@ body{
     background: white;
 	font-size: 0;
 	border-bottom: 3px solid black;
+	font-weight: bold;
 }
 
 .logo {
 	width: 100%;
 	position: fixed;
 	top: 0;
-	z-index: 99;
+	z-index: -1;
 	text-align: center;
 }
 
@@ -80,15 +98,23 @@ body{
 .logo-home {
 	content: url(../fundmykulture/img/home.png);
     width: 15px;
+	margin-top: -2px;
+	margin-right: 5px;
 }
 
 .logo-search {
 	content: url(../fundmykulture/img/search.png);
     width: 15px;
+	margin-top: -2px;
+	margin-right: 5px;
 }
 
 .logo-login {
 	content: url(../fundmykulture/img/login.png);
     width: 15px;
+	margin-top: -2px;
+	margin-right: 5px;
 }
+
+/*********** CONTAINER *************/
 
