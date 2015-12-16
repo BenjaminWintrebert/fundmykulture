@@ -11,12 +11,10 @@
 
 ?>
 
-	</div><!-- #content -->
+</div><!-- #content -->
 <footer id="footer" class="fixed-bottom">
-	<div class="footer-container"><span class="fs-small">Copyright FundMyKulture</span></div>
+    <div class="footer-container"><span class="fs-small">Copyright FundMyKulture</span></div>
 </footer>
-
 <?php wp_footer(); ?>
-
 </body>
 </html>
