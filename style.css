@@ -79,34 +79,24 @@ a {
     top: 0;
     width: 100%;
     z-index: 100;
-<<<<<<< HEAD
-    height: 40px;
-    line-height: 40px;
-=======
     height: 50px;
-	line-height: 50px;
->>>>>>> 7c6d4db729d5ee0eadf96e56c0920d52016088bd
+    line-height: 50px;
     background: white;
     font-size: 0;
     border-bottom: 3px solid black;
     font-weight: bold;
 }
 
-<<<<<<< HEAD
-.logo {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: -1;
-    text-align: center;
-=======
+#header form{
+    display: inline;
+}
+
 .logo-container {
 	width: 100%;
 	position: fixed;
 	top: 0;
 	z-index: -1;
 	text-align: center;
->>>>>>> 7c6d4db729d5ee0eadf96e56c0920d52016088bd
 }
 
 .search {
@@ -123,43 +113,23 @@ a {
 .logo-home {
     content: url(../fundmykulture/img/home.png);
     width: 15px;
-<<<<<<< HEAD
-    margin-top: -2px;
-    margin-right: 5px;
-=======
 	margin-bottom: -3px;
 	margin-right: 5px;
->>>>>>> 7c6d4db729d5ee0eadf96e56c0920d52016088bd
+
 }
 
 .logo-search {
     content: url(../fundmykulture/img/search.png);
     width: 15px;
-<<<<<<< HEAD
-    margin-top: -2px;
-    margin-right: 5px;
-=======
 	margin-bottom: -3px;
 	margin-right: 5px;
->>>>>>> 7c6d4db729d5ee0eadf96e56c0920d52016088bd
 }
 
 .logo-login {
     content: url(../fundmykulture/img/login.png);
     width: 15px;
-<<<<<<< HEAD
-    margin-top: -2px;
-    margin-right: 5px;
-}
-
-#container {
-    width:1024px;
-    margin-left: auto;
-    margin-right: auto;
-=======
 	margin-bottom: -3px;
 	margin-right: 5px;
->>>>>>> 7c6d4db729d5ee0eadf96e56c0920d52016088bd
 }
 
 .brick {
@@ -167,11 +137,16 @@ a {
     padding:0px 10px 15px 10px;
 }
 
-<<<<<<< HEAD
 .brick .img_projet img{
     width: 100%;
     height: auto;
-=======
+}
+
+#container{
+    margin:30px auto;
+    width:1024px;
+}
+
 /*********** FOOTER *************/
 
 #footer {
@@ -193,5 +168,4 @@ a {
 	bottom: 0;
 	z-index: -1;
 	text-align: center;
->>>>>>> 7c6d4db729d5ee0eadf96e56c0920d52016088bd
 }
