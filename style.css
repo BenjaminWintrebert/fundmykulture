@@ -87,8 +87,17 @@ a {
     font-weight: bold;
 }
 
+#header a:hover {
+  color: #dbb185;
+}
+
 #header form{
     display: inline;
+}
+
+#header form input:focus
+{
+    outline: 2px solid #dbb185;
 }
 
 .logo-container {
