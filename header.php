@@ -21,30 +21,19 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'fundmykulture' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
+	<header id="header" class="fixed">
+		<div class="logo fs-medium">LOGO</div>
+		<div class="col-50 t-left">
+	<div class="fs-medium"><span class="logo-home"></span>Accueil</div>
+			</div>
+	<!--<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo"><div class="brand fs-medium"><?php bloginfo( 'name' ); ?></div></a>-->
+	<div class="col-50 t-right">
+		<span class="fs-medium"><span class="logo-search"></span>Recherche</span>
+		<span class="fs-medium"><span class="logo-login"></span>Se connecter</span>
+		</div>
+		</header>
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'fundmykulture' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
