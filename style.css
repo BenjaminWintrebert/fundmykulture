@@ -145,6 +145,7 @@ a {
 #container{
     margin:30px auto;
     width:1024px;
+    max-width: 100%;
 }
 
 /*********** FOOTER *************/
