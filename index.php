@@ -14,43 +14,51 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div id="primary" class="content-area">
+    <div class="row" id="ms-container">
+        <?php $loop = new WP_Query( array( 'post_type' => 'projet', 'posts_per_page' => -1 ) ); ?>
+        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+        <div class="ms-item">
 
-		<?php
-		if ( have_posts() ) :
+            <?php if (has_post_thumbnail()) : ?>
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+            <figure class="article-preview-image">
 
-			<?php
-			endif;
+                <?php the_post_thumbnail('large'); ?>
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+            </figure>
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+            <?php else : ?>
 
-			endwhile;
+            <?php endif; ?>
 
-			the_posts_navigation();
+            <h2 class="post-title"><a href="<?php the_permalink(); ?>" class="post-title-link"><?php the_title(); ?></a></h2>
 
-		else :
+            <?php the_excerpt(); ?>
 
-			get_template_part( 'template-parts/content', 'none' );
+            <div class="clearfix"></div>
 
-		endif; ?>
+            <a href="<?php the_permalink(); ?>" class="btn btn-green btn-block">Read More</a>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+            <div class="clearfix"></div>
 
-<?php
-get_sidebar();
+        </div>
+
+        <?php endwhile;
+
+else : ?>
+
+        <article class="no-posts">
+
+            <h1><?php _e('No posts were found.', 'webtegrity-framework'); ?></h1>
+
+        </article>
+        <?php endif; ?>
+
+    </div>
+    <div class="clearfix"></div>
+
+    <?php
 get_footer();
+
+<?php endwhile; wp_reset_query(); ?>
