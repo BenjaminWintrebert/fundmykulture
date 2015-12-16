@@ -12,7 +12,7 @@
 </div>
 <script>
     jQuery( document ).ready( function( $ ) {
-        $( '#container' ).masonry( { columnWidth: 220 } );
+        $( '#container' ).masonry( { columnWidth: 341 } );
     } );
 </script>
 <?php get_footer(); ?>
