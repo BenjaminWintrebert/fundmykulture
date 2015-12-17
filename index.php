@@ -15,10 +15,14 @@ $loop = new WP_Query( array(
         <?php $custom = get_post_custom($post->ID); ?>
         <div class="brick <?php echo $custom['categories'][0]; ?>">
             <div class="projet_container">
-                <div class="img_projet"><?php the_post_thumbnail(); ?></div>
-                <?php echo $custom['objectif'][0]; ?>
-                <?php echo $custom['fin_de_la_campagne'][0]; ?>
-                <?php the_title(); ?>
+				<figcaption>
+					<span>
+						<?php echo $custom['objectif'][0]; ?>
+						<?php echo $custom['fin_de_la_campagne'][0]; ?>
+						<?php the_title(); ?>
+					</span>
+				</figcaption>
+				<div class="img_projet"><?php the_post_thumbnail(); ?></div>
             </div>
         </div>
     </a>

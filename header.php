@@ -26,11 +26,11 @@
 	<header id="header" class="fixed">
 		<div class="logo-container"><span class="logo-site"></span></div>
 		<div class="col-50 t-left">
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="fs-medium ml10 accueil"><span class="logo-home"></span>Accueil</a>
-			</div>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="fs-medium ml20 mr20 accueil"><span class="logo-home"></span>Accueil</a>
+			<form><span class="logo-search"></span>Recherche<input type="text" class="fs-medium search" placeholder="Rechercher"></form>
+		</div>
 	<div class="col-50 t-right">
-		<form><span class="logo-search"></span>Recherche<input type="text" class="fs-medium search" placeholder="Rechercher"></form>
-		<span class="fs-medium ml10 mr10 login"><a href='<?php wp_logout_url("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']); ?>'><span class="logo-login"></span>Se connecter</a></span>
+		<span class="fs-medium ml20 mr20 login"><a href='<?php wp_logout_url("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']); ?>'><span class="logo-login"></span>Se connecter</a></span>
 		</div>
 		</header>
 
