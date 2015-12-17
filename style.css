@@ -97,6 +97,14 @@ a {
     display: inline;
 }
 
+.search:focus {
+    outline: 2px solid #dbb185;
+}
+
+.search:focus > a {
+    content: url(../fundmykulture/img/search-hover.png);
+}
+
 .logo-container {
 	width: 100%;
 	position: fixed;
@@ -152,6 +160,18 @@ a {
     margin:30px auto;
     width:1024px;
     max-width: 100%;
+}
+
+a:hover{
+    color: #dbb185;
+}
+
+.accueil:hover > span {
+    content: url(../fundmykulture/img/home-hover.png);
+}
+
+.login:hover > a span.logo-login {
+    content: url(../fundmykulture/img/login-hover.png);
 }
 
 /*********** FOOTER *************/
