@@ -235,6 +235,11 @@ canvas{
     line-height: 40px;
     text-align: center;
     width: 25%;
+    display: inline-block;
+}
+
+.stat-4 .dashicons{
+    line-height: 40px!important;
 }
 
 /************* POST ************/
@@ -291,9 +296,9 @@ canvas{
 }
 
 .brick:hover img {
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  -o-transform: scale(1.2);
-  transform: scale(1.2);
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5) rotate(-5deg);
 }

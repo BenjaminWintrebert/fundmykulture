@@ -22,9 +22,7 @@
         }
     ?>
 
-    <?php var_dump($custom); ?>
-
-    <div class="post_stats"><div class='stat-4'><?php echo $restant; ?></div><div class='stat-4'></div><div class='stat-4'></div><div class='stat-4'></div></div>
+    <div class="post_stats"><div class='stat-4'><span class="dashicons dashicons-clock"></span> <?php echo $restant; ?></div><div class='stat-4'> <span class="dashicons dashicons-chart-area"></span> 82% collectés</div><div class='stat-4'><span class="dashicons dashicons-admin-users"></span> 39 contributeurs</div><div class='stat-4'></div></div>
 
     <div class="content">
         <?php the_content(); ?>
