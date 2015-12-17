@@ -119,7 +119,7 @@
 
 		if (dist <= minDist){
 			ctx.beginPath();
-			ctx.strokeStyle = "rgba(138,93,65,"+ (0.2-dist/minDist) +")";
+			ctx.strokeStyle = "rgba(138,93,65,"+ (0.3-dist/minDist) +")";
 			ctx.moveTo(p1.x, p1.y);
 			ctx.lineTo(p2.x, p2.y);
 			ctx.stroke();
