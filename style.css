@@ -102,7 +102,7 @@ a {
     outline: 2px solid #dbb185;
 }
 
-.search:focus > a {
+.search:focus.logo-search {
     content: url(../fundmykulture/img/search-hover.png);
 }
 
@@ -112,10 +112,6 @@ a {
     top: 0;
     z-index: -1;
     text-align: center;
-}
-
-.search {
-    background-image: url(/img/search.png);
 }
 
 .logo-site {
@@ -130,7 +126,6 @@ a {
     width: 15px;
     margin-bottom: -3px;
     margin-right: 5px;
-
 }
 
 .logo-search {
