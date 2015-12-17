@@ -1,21 +1,21 @@
 <?php get_header(); ?>
 <div id="container">
     <?php
-        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-        $loop = new WP_Query( array(
-            'post_type' => 'projet',
-            'posts_per_page' => -1,
-            'orderby'=> 'date',
-            'paged'=>$paged
-        ));
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$loop = new WP_Query( array(
+    'post_type' => 'projet',
+    'posts_per_page' => -1,
+    'orderby'=> 'date',
+    'paged'=>$paged
+));
     ?>
     <?php $max_num_pages=$loop->max_num_pages ?>
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
     <a href='<?php the_permalink(); ?>'>
-        <div class="brick">
+        <?php $custom = get_post_custom($post->ID); ?>
+        <div class="brick <?php echo $custom['categories'][0]; ?>">
             <div class="projet_container">
                 <div class="img_projet"><?php the_post_thumbnail(); ?></div>
-                <?php $custom = get_post_custom($post->ID); ?>
                 <?php echo $custom['objectif'][0]; ?>
                 <?php echo $custom['fin_de_la_campagne'][0]; ?>
                 <?php the_title(); ?>
