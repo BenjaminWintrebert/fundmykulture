@@ -30,7 +30,7 @@ $loop = new WP_Query( array(
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
     <a href='<?php the_permalink(); ?>'>
         <?php $custom = get_post_custom($post->ID); ?>
-        <div class="brick <?php echo $custom['categories'][0]; ?>">
+        <div class="brick <?php echo str_replace('é', 'e', $custom['categories'][0]); ?>">
             <div class="projet_container">
 				<figcaption>
 					<span>
