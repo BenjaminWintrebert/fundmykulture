@@ -87,18 +87,18 @@ a {
     font-weight: bold;
 }
 
-#header a:hover {
-  color: #dbb185;
-}
-
 #header form{
     display: inline;
 }
 
-#header form input:focus
-{
+.search:focus {
     outline: 2px solid #dbb185;
 }
+
+.search:focus > a {
+    content: url(../fundmykulture/img/search-hover.png);
+}
+
 
 .logo-container {
 	width: 100%;
@@ -154,6 +154,18 @@ a {
 #container{
     margin:30px auto;
     width:1024px;
+}
+
+a:hover{
+    color: #dbb185;
+}
+
+.accueil:hover > span {
+    content: url(../fundmykulture/img/home-hover.png);
+}
+
+.login:hover > a span.logo-login {
+    content: url(../fundmykulture/img/login-hover.png);
 }
 
 /*********** FOOTER *************/

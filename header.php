@@ -26,11 +26,11 @@
 	<header id="header" class="fixed">
 		<div class="logo-container"><span class="logo-site"></span></div>
 		<div class="col-50 t-left">
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="fs-medium ml10"><span class="logo-home"></span>Accueil</a>
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="fs-medium ml10 accueil"><span class="logo-home"></span>Accueil</a>
 			</div>
 	<div class="col-50 t-right">
-		<span class="logo-search"></span>Recherche</span><form><input type="text" class="fs-medium" placeholder="Rechercher"></form>
-		<span class="fs-medium ml10 mr10"><a href='<?php echo esc_url( home_url( "/login" ) ); ?>'><span class="logo-login"></span>Se connecter</a></span>
+		<form><span class="logo-search"></span>Recherche<input type="text" class="fs-medium search" placeholder="Rechercher"></form>
+		<span class="fs-medium ml10 mr10 login"><a href='<?php echo esc_url( home_url( "/login" ) ); ?>'><span class="logo-login"></span>Se connecter</a></span>
 		</div>
 		</header>
 
