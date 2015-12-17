@@ -58,3 +58,4 @@ $('#content').on('click', 'label', function () {
 	}
 
 });
+

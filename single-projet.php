@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 <script type='text/javascript' src='<?php echo get_template_directory_uri() . '/js/slider.js'; ?>'></script>
-
 <script>
     jssor_1_slider_init = function() {
 
@@ -83,22 +82,22 @@ else{
                 <div data-p="112.50" style="display: none;">
                     <img src="<?php echo $img; ?>" />
                 </div>
-                <?php if(isset($custom['image_additionnel_1'][0])) { ?>
+                <?php if(!empty($custom['image_additionnel_1'][0])) { ?>
                 <div data-p="112.50" style="display: none;">
                     <?php echo wp_get_attachment_image($custom['image_additionnel_1'][0], 'full'); ?>
                 </div>
                 <?php } ?>
-                <?php if(isset($custom['image_additionnel_2'][0])) { ?>
+                <?php if(!empty($custom['image_additionnel_2'][0])) { ?>
                 <div data-p="112.50" style="display: none;">
                     <?php echo wp_get_attachment_image($custom['image_additionnel_2'][0], 'full'); ?>
                 </div>
                 <?php } ?>
-                <?php if(isset($custom['image_additionnel_3'][0])) { ?>
+                <?php if(!empty($custom['image_additionnel_3'][0])) { ?>
                 <div data-p="112.50" style="display: none;">
                     <?php echo wp_get_attachment_image($custom['image_additionnel_3'][0], 'full'); ?>
                 </div>
                 <?php } ?>
-                <?php if(isset($custom['image_additionnel_4'][0])) { ?>
+                <?php if(!empty($custom['image_additionnel_4'][0])) { ?>
                 <div data-p="112.50" style="display: none;">
                     <?php echo wp_get_attachment_image($custom['image_additionnel_4'][0], 'full'); ?>
                 </div>
@@ -125,11 +124,16 @@ else{
 
     <?php
 if($custom['ajouter_des_paliers_'][0]!='0'){
-    for($i=1;$i<=$custom['ajouter_des_paliers_'][0];$i++){
-
-    }
+    for($i=1;$i<=$custom['ajouter_des_paliers_'][0];$i++){ ?>
+        <li>
+            <h2>Palier <?php echo $i; ?> : <?php echo $custom['palier_'.$i][0]; ?> - <?php echo $custom['valeur_du_palier_'.$i][0]; ?></h2>
+            <p><?php echo $custom['description_du_palier_'.$i][0]; ?></p>
+        </li>
+  <?php  }
 }
     ?>
+
+
 </div>
 <?php endwhile; ?>
 <?php endif; ?>
