@@ -1,5 +1,22 @@
 <?php get_header(); ?>
+ <div id="filter" class="center">
+	<input type="radio" id="all" name="color"/>
+	<label for="all">All</label>
+	<input type="radio" id="musique" name="color" />
+	<label for="musique">Musiques</label>
+	<input type="radio" id="video" name="color"/>
+	<label for="video">Vidéos</label>
+	<input type="radio" id="spectacle" name="color"/>
+	<label for="spectacle">Spectacles</label>
+	<input type="radio" id="jeux" name="color" />
+	<label for="jeux">Jeux</label>
+	<input type="radio" id="litterature" name="color" />
+	<label for="litterature">Littératures</label>
+	<input type="radio" id="autres" name="color" />
+	<label for="autres">Autres</label>
+</div>
 <div id="container">
+    <?php $loop = new WP_Query( array( 'post_type' => 'projet', 'posts_per_page' => -1 ) ); ?>
     <?php
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $loop = new WP_Query( array(
@@ -34,49 +51,8 @@ $loop = new WP_Query( array(
 </div>
 <?php wp_reset_query(); ?>
 
+<script src="<?php echo get_template_directory_uri() . '/js/masonry.js'; ?>"></script>
 <script src="<?php echo get_template_directory_uri() . '/js/particle.js'; ?>"></script>
-
-<script>
-    jQuery( document ).ready( function( $ ) {
-        /* Masonry + Infinite Scroll */
-        var $container = $('#container');
-        $container.imagesLoaded(function () {
-            $container.masonry({
-                itemSelector: '.brick'
-            });
-        });
-        $('#container').masonry({
-            itemSelector: '.brick',
-            columnWidth: 341
-        });
-        $container.infinitescroll({
-            navSelector: '#page-nav',
-            nextSelector: '#page-nav a',
-            itemSelector: '.brick',
-            loading: {
-                msgText: 'Chargement des contenus...',
-                finishedMsg: 'Aucun contenu à charger.',
-                img: 'http://i.imgur.com/6RMhx.gif'
-            }
-        }, function (newElements) {
-            var $newElems = $(newElements).css({
-                opacity: 0
-            });
-            $newElems.imagesLoaded(function () {
-                $newElems.animate({
-                    opacity: 1
-                });
-                $container.masonry('appended', $newElems, true);
-            });
-        });
-        $(window).unbind('.infscr');
-        jQuery("#page-nav a").click(function () {
-            jQuery('#container').infinitescroll('retrieve');
-            return false;
-        });
-        $(document).ajaxError(function (e, xhr, opt) {
-            if (xhr.status == 404) $('#page-nav a').remove();
-        });
-    });
-</script>
+<script src="<?php echo get_template_directory_uri() . '/js/trie.js'; ?>"></script>
+<script>jQuery( document ).ready( function() {masonry();});</script>
 <?php get_footer(); ?>

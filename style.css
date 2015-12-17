@@ -58,6 +58,10 @@ body{
     text-align: right;
 }
 
+.center {
+	text-align: center;
+}
+
 .mr5 {
     margin-right: 5px;
 }
@@ -77,6 +81,10 @@ a {
 
 input {
     border:2px solid black;
+}
+
+.hidden {
+	display: none;
 }
 
 
@@ -174,6 +182,100 @@ a:hover{
 
 .login:hover > a span.logo-login {
     content: url(../fundmykulture/img/login-hover.png);
+}
+/***********Contenainer**********/
+/* Barre de filtre*/
+#filter{
+    width: 100%;
+}
+
+#filter h2{
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    visibility:hidden;
+}
+
+label {
+  text-align:center;
+  padding:0.5%;
+  margin:0.5%;
+  cursor:pointer;
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition-duration: 0.2s;
+}
+
+label[for="all"]{
+   border: 2px #000000 solid;
+}
+
+label[for="musique"]{
+   border: 2px #FD9A42 solid;
+}
+
+label[for="video"]{
+  border: 2px #E14133 solid;
+}
+
+label[for="spectacle"]{
+    border: 2px #51AE43 solid;
+}
+
+label[for="jeux"]{
+   border: 2px #EECB23 solid;
+}
+label[for="litterature"]{
+   border: 2px #0E67AF solid;
+}
+
+label[for="autres"]{
+   border: 2px #B971D8 solid;
+}
+
+input[type="radio"][id="all"]:checked + label, label[for="all"]:hover{
+	background:#000000;
+	color:white;
+	transition-duration: 0.2s;
+}
+
+input[type="radio"][id="musique"]:checked + label, label[for="musique"]:hover {
+    background-color:#FD9A42;
+    color:white;
+	transition-duration: 0.2s;
+}
+
+input[type="radio"][id="video"]:checked + label, label[for="video"]:hover {
+    background-color:#E14133;
+    color:white;
+	transition-duration: 0.2s;
+}
+
+input[type="radio"][id="spectacle"]:checked + label, label[for="spectacle"]:hover {
+	background-color:#51AE43;
+	color:white;
+	transition-duration: 0.2s;
+}
+
+input[type="radio"][id="jeux"]:checked + label, label[for="jeux"]:hover {
+	background-color:#EECB23;
+  	color:white;
+	transition-duration: 0.2s;
+}
+
+input[type="radio"][id="litterature"]:checked + label, label[for="litterature"]:hover {
+  	background-color:#0E67AF;
+	color:white;
+	transition-duration: 0.2s;
+}
+
+input[type="radio"][id="autres"]:checked + label, label[for="autres"]:hover {
+ 	 background-color:#B971D8;
+  	color:white;
+  	transition-duration: 0.3s;
 }
 
 /*********** FOOTER *************/
