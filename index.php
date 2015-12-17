@@ -10,6 +10,7 @@
     </div>
     <?php endwhile; wp_reset_query(); ?>
 </div>
+<script src="<?php echo get_template_directory_uri() . '/js/particle.js'; ?>"></script>
 <script>
     jQuery( document ).ready( function( $ ) {
         $( '#container' ).masonry( { columnWidth: 341 } );
