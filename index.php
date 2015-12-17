@@ -11,23 +11,29 @@
     ?>
     <?php $max_num_pages=$loop->max_num_pages ?>
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-    <div class="brick">
-        <div class="projet_container">
-            <div class="img_projet"><?php the_post_thumbnail(); ?></div>
-            <?php $custom = get_post_custom($post->ID); ?>
-            <?php echo $custom['objectif'][0]; ?>
-            <?php echo $custom['fin_de_la_campagne'][0]; ?>
-            <?php the_title(); ?>
+    <a href='<?php the_permalink(); ?>'>
+        <div class="brick">
+            <div class="projet_container">
+                <div class="img_projet"><?php the_post_thumbnail(); ?></div>
+                <?php $custom = get_post_custom($post->ID); ?>
+                <?php echo $custom['objectif'][0]; ?>
+                <?php echo $custom['fin_de_la_campagne'][0]; ?>
+                <?php the_title(); ?>
+            </div>
         </div>
-    </div>
+    </a>
     <?php endwhile; ?>
 
 </div>
+
 <div class="navigation">
     <div class="alignleft"><?php previous_posts_link('&laquo; Previous') ?></div>
     <div class="alignright"><?php next_posts_link('More &raquo;') ?></div>
 </div>
 <?php wp_reset_query(); ?>
+
+<script src="<?php echo get_template_directory_uri() . '/js/particle.js'; ?>"></script>
+
 <script>
     jQuery( document ).ready( function( $ ) {
         /* Masonry + Infinite Scroll */

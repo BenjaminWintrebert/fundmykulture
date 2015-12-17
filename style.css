@@ -27,11 +27,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 html{
     margin-top: 32px;
+    height: 100%;
 }
 
 body{
     background: white;
     font-family: "Century Gothic", sans-serif;
+    height: calc(100% - 70px);
+    margin-top: 38px;
 }
 
 .col-50 {
@@ -44,7 +47,7 @@ body{
 }
 
 .fs-small {
-	font-size: 10px;
+    font-size: 10px;
 }
 
 .t-left {
@@ -96,11 +99,11 @@ a {
 }
 
 .logo-container {
-	width: 100%;
-	position: fixed;
-	top: 0;
-	z-index: -1;
-	text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    text-align: center;
 }
 
 .search {
@@ -108,7 +111,7 @@ a {
 }
 
 .logo-site {
-	content: url(../fundmykulture/img/logo-site.png);
+    content: url(../fundmykulture/img/logo-site.png);
     width: 100px;
     margin-top: 6px;
     margin-right: 5px;
@@ -117,23 +120,23 @@ a {
 .logo-home {
     content: url(../fundmykulture/img/home.png);
     width: 15px;
-	margin-bottom: -3px;
-	margin-right: 5px;
+    margin-bottom: -3px;
+    margin-right: 5px;
 
 }
 
 .logo-search {
     content: url(../fundmykulture/img/search.png);
     width: 15px;
-	margin-bottom: -3px;
-	margin-right: 5px;
+    margin-bottom: -3px;
+    margin-right: 5px;
 }
 
 .logo-login {
     content: url(../fundmykulture/img/login.png);
     width: 15px;
-	margin-bottom: -3px;
-	margin-right: 5px;
+    margin-bottom: -3px;
+    margin-right: 5px;
 }
 
 .brick {
@@ -160,58 +163,27 @@ a {
     width: 100%;
     z-index: 100;
     height: 30px;
-	line-height: 24px;
+    line-height: 24px;
     background: white;
-	font-size: 0;
-	border-top: 3px solid black;
-	font-weight: bold;
+    font-size: 0;
+    border-top: 3px solid black;
+    font-weight: bold;
 }
 
 .footer-container {
-	width: 100%;
-	position: fixed;
-	bottom: 0;
-	z-index: -1;
-	text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    text-align: center;
 }
 
-/* Infinite Scroll */
-.load-more-manual #page-nav {
-	display:block !important;
-}
-#page-nav {
-	display:none;
-	text-align:center;
-}
-.load-more-manual #page-nav a {
-	margin:20px auto 10px auto;
-	display:inline-block;
-	width:auto;
-}
-.load-more-manual #page-nav a {
-    font-weight: bold;
-    display: inline-block;
-    font-size: 15px;
+#content{
+    z-index: 5;
     position: relative;
-    transition-duration: 150ms;
-    text-decoration: none;
 }
-#infscr-loading {
-	text-align: center;
-	z-index: 100;
-	position: fixed;
-	left: 50%;
-	bottom: 40px;
-	width: 200px;
-	margin-left:-100px;
-	padding: 10px;
-	background: #000;
-	opacity: 0.8;
-	color: #FFF;
-	-webkit-border-radius: 10px;
-	 -moz-border-radius: 10px;
-	      border-radius: 10px;
-}
-.more {
-	width: 300px;
+
+canvas{
+    position: fixed;
+    top:50px;
 }
