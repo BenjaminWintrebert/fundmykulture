@@ -1,7 +1,7 @@
 <?php get_header(); ?>
  <div id="filter" class="center">
 	<input type="radio" id="all" name="color"/>
-	<label for="all">Tout</label>
+	<label for="all">All</label>
 	<input type="radio" id="musique" name="color" />
 	<label for="musique">Musiques</label>
 	<input type="radio" id="video" name="color"/>
