@@ -1,5 +1,6 @@
 <?php get_header(); ?>
-<script type='text/javascript' src='http://localhost/marathon/wp-content/themes/fundmykulture/js/slider.js?ver=2.0'></script>
+<script type='text/javascript' src='<?php echo get_template_directory_uri() . '/js/slider.js'; ?>'></script>
+
 <script>
     jssor_1_slider_init = function() {
 
