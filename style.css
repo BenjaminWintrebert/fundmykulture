@@ -25,6 +25,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     padding:0;
 }
 
+html{
+    margin-top: 32px;
+}
+
 body{
     background: white;
     font-family: "Century Gothic", sans-serif;
@@ -169,4 +173,45 @@ a {
 	bottom: 0;
 	z-index: -1;
 	text-align: center;
+}
+
+/* Infinite Scroll */
+.load-more-manual #page-nav {
+	display:block !important;
+}
+#page-nav {
+	display:none;
+	text-align:center;
+}
+.load-more-manual #page-nav a {
+	margin:20px auto 10px auto;
+	display:inline-block;
+	width:auto;
+}
+.load-more-manual #page-nav a {
+    font-weight: bold;
+    display: inline-block;
+    font-size: 15px;
+    position: relative;
+    transition-duration: 150ms;
+    text-decoration: none;
+}
+#infscr-loading {
+	text-align: center;
+	z-index: 100;
+	position: fixed;
+	left: 50%;
+	bottom: 40px;
+	width: 200px;
+	margin-left:-100px;
+	padding: 10px;
+	background: #000;
+	opacity: 0.8;
+	color: #FFF;
+	-webkit-border-radius: 10px;
+	 -moz-border-radius: 10px;
+	      border-radius: 10px;
+}
+.more {
+	width: 300px;
 }
