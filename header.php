@@ -12,16 +12,16 @@
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+    <head>
+        <meta charset="<?php bloginfo( 'charset' ); ?>">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="profile" href="http://gmpg.org/xfn/11">
+        <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-<?php wp_head(); ?>
-</head>
+        <?php wp_head(); ?>
+    </head>
 
-<body <?php body_class(); ?>>
+    <body <?php body_class(); ?>>
 
 	<header id="header" class="fixed">
 		<div class="logo-container"><span class="logo-site"></span></div>
@@ -30,10 +30,8 @@
 			</div>
 	<div class="col-50 t-right">
 		<form><span class="logo-search"></span>Recherche<input type="text" class="fs-medium search" placeholder="Rechercher"></form>
-		<span class="fs-medium ml10 mr10 login"><a href='<?php echo esc_url( home_url( "/login" ) ); ?>'><span class="logo-login"></span>Se connecter</a></span>
+		<span class="fs-medium ml10 mr10 login"><a href='<?php wp_logout_url("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']); ?>'><span class="logo-login"></span>Se connecter</a></span>
 		</div>
 		</header>
 
-
-
-	<div id="content" class="site-content">
+    <div id="content" class="site-content">

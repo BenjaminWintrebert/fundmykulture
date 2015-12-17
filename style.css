@@ -25,9 +25,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     padding:0;
 }
 
+html {
+	height: 100%;
+}
+
 body{
     background: white;
     font-family: "Century Gothic", sans-serif;
+	height: calc(100% - 70px);
+	margin-top: 38px;
 }
 
 .col-50 {
@@ -153,6 +159,7 @@ a {
 #container{
     margin:30px auto;
     width:1024px;
+    max-width: 100%;
 }
 
 a:hover{
