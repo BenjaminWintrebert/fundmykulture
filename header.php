@@ -30,7 +30,7 @@
             </div>
             <div class="col-50 t-right">
                 <form><span class="logo-search"></span><input type="text" class="fs-medium search" placeholder="Rechercher"></form>
-                <?php if ( !is_user_logged_in() ) { ?> <span class="fs-medium ml10 mr10 login"><a href='<?php echo esc_url( home_url( "/login" ) ); ?>'><span class="logo-login"></span>Se connecter</a></span> <?php }
+                <?php if ( !is_user_logged_in() ) { ?> <span class="fs-medium ml10 mr10 login"><a href='<?php echo esc_url( home_url( "/wp-login.php" ) ); ?>'><span class="logo-login"></span>Se connecter</a></span> <?php }
 else{ ?>
                 <span class="fs-medium ml10 mr10 login"><a href='<?php echo wp_logout_url("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']); ?>'><span class="logo-login"></span>Se déconnecter</a></span>
                 <?php } ?>

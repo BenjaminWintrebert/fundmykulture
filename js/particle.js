@@ -13,6 +13,7 @@
 	ctx = canvas.getContext('2d');
 
 	window.onresize = function(event) {
+		h = document.body.offsetHeight;
     	w = window.innerWidth;
 	}
 

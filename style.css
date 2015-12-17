@@ -148,12 +148,14 @@ input {
 
 .brick {
     width:321px;
-    margin: 0px 10px 15px 10px;
+    margin: 0px 6px 11px 6px;
+	border: 3px solid black;
 }
 
 .brick .img_projet img{
     width: 100%;
     height: auto;
+	margin-bottom: -5px;
 }
 
 #container{
@@ -296,4 +298,28 @@ canvas{
   -ms-transform: scale(1.2);
   -o-transform: scale(1.2);
   transform: scale(1.2);
+}
+
+.Musique {
+	border-color: #FD9A42;
+}
+
+.Video {
+	border-color: #E14133;
+}
+
+.Spectacle {
+	border-color: #4DAC3F;
+}
+
+.Jeux {
+	border-color: #EECB23;
+}
+
+.Litteratures {
+	border-color: #0E67AF;
+}
+
+.Autres {
+	border-color: #B971D8;
 }
