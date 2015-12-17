@@ -202,3 +202,33 @@ canvas{
     position: fixed;
     top:50px;
 }
+
+.postimg{
+    height: 250px;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+}
+
+.postimg h1{
+    text-align: right;
+    padding-right: 10px;
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    background-color: rgba(90, 53, 26, 0.77);
+    color:white;
+    padding-left:10px;
+}
+
+.post_stats{
+    height:40px;
+    background-color: black;
+    color: white;
+}
+
+.stat-4{
+    line-height: 40px;
+    text-align: center;
+    width: 25%;
+}
