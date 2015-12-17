@@ -1,25 +1,22 @@
 <?php get_header(); ?>
+ <div id="filter" class="center">
+	<input type="radio" id="all" name="color"/>
+	<label for="all">Tout</label>
+	<input type="radio" id="musique" name="color" />
+	<label for="musique">Musiques</label>
+	<input type="radio" id="video" name="color"/>
+	<label for="video">Vidéos</label>
+	<input type="radio" id="spectacle" name="color"/>
+	<label for="spectacle">Spectacles</label>
+	<input type="radio" id="jeux" name="color" />
+	<label for="jeux">Jeux</label>
+	<input type="radio" id="litterature" name="color" />
+	<label for="litterature">Littératures</label>
+	<input type="radio" id="autres" name="color" />
+	<label for="autres">Autres</label>
+</div>
 <div id="container">
-<<<<<<< HEAD
-    <div id="filter">
-        <h2>Filtrer par catégorie:</h2>
-                <input type="radio" id="reset" name="color"/>
-                <label for="reset">Reset</label>
-                <input type="radio" id="orange" name="color" />
-                <label for="orange">Orange</label>
-                <input type="radio" id="red" name="color"/>
-                <label for="red">RED</label>
-                <input type="radio" id="green" name="color"/>
-                <label for="green">GREEN</label>
-                <input type="radio" id="jaune" name="color" />
-                <label for="jaune">JAUNE</label>
-                <input type="radio" id="blue" name="color" />
-                <label for="blue">BLUE</label>
-                <input type="radio" id="violet" name="color" />
-                <label for="violet">VIOLET</label>
-    </div>
     <?php $loop = new WP_Query( array( 'post_type' => 'projet', 'posts_per_page' => -1 ) ); ?>
-=======
     <?php
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $loop = new WP_Query( array(
@@ -30,7 +27,6 @@ $loop = new WP_Query( array(
 ));
     ?>
     <?php $max_num_pages=$loop->max_num_pages ?>
->>>>>>> upstream/master
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
     <a href='<?php the_permalink(); ?>'>
         <?php $custom = get_post_custom($post->ID); ?>
@@ -55,49 +51,8 @@ $loop = new WP_Query( array(
 </div>
 <?php wp_reset_query(); ?>
 
+<script src="<?php echo get_template_directory_uri() . '/js/masonry.js'; ?>"></script>
 <script src="<?php echo get_template_directory_uri() . '/js/particle.js'; ?>"></script>
-
-<script>
-    jQuery( document ).ready( function( $ ) {
-        /* Masonry + Infinite Scroll */
-        var $container = $('#container');
-        $container.imagesLoaded(function () {
-            $container.masonry({
-                itemSelector: '.brick'
-            });
-        });
-        $('#container').masonry({
-            itemSelector: '.brick',
-            columnWidth: 341
-        });
-        $container.infinitescroll({
-            navSelector: '#page-nav',
-            nextSelector: '#page-nav a',
-            itemSelector: '.brick',
-            loading: {
-                msgText: 'Chargement des contenus...',
-                finishedMsg: 'Aucun contenu à charger.',
-                img: 'http://i.imgur.com/6RMhx.gif'
-            }
-        }, function (newElements) {
-            var $newElems = $(newElements).css({
-                opacity: 0
-            });
-            $newElems.imagesLoaded(function () {
-                $newElems.animate({
-                    opacity: 1
-                });
-                $container.masonry('appended', $newElems, true);
-            });
-        });
-        $(window).unbind('.infscr');
-        jQuery("#page-nav a").click(function () {
-            jQuery('#container').infinitescroll('retrieve');
-            return false;
-        });
-        $(document).ajaxError(function (e, xhr, opt) {
-            if (xhr.status == 404) $('#page-nav a').remove();
-        });
-    });
-</script>
+<script src="<?php echo get_template_directory_uri() . '/js/trie.js'; ?>"></script>
+<script>jQuery( document ).ready( function() {masonry();});</script>
 <?php get_footer(); ?>
