@@ -173,6 +173,90 @@ a:hover{
 .login:hover > a span.logo-login {
     content: url(../fundmykulture/img/login-hover.png);
 }
+/***********Contenainer**********/
+/* Barre de filtre*/
+#filter{
+    width: 100%;
+}
+
+#filter h2{
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    display:none;
+}
+
+label {
+  text-align:center;
+  padding:0.5%;
+  margin:0.5%;
+  margin-bottom:30px;
+  cursor:pointer;
+    display: inline-block;
+    width: 100px;
+}
+
+label[for="reset"]{
+   border: 2px #000000 solid;
+}
+
+label[for="orange"]{
+   border: 2px #e58200 solid;
+}
+
+label[for="red"]{
+  border: 2px #E3483A solid;
+}
+
+label[for="green"]{
+    border: 2px #51AE43 solid;
+}
+
+label[for="jaune"]{
+   border: 2px #EECB23 solid;
+}
+label[for="blue"]{
+   border: 2px #0E67AF solid;
+}
+
+label[for="violet"]{
+   border: 2px #B567D6 solid;
+}
+input[type="radio"][id="reset"]:checked + label {
+  background:#000000;
+    color:white;
+}
+
+input[type="radio"][id="orange"]:checked + label {
+  background-color:#e58200;
+     color:white;
+}
+
+input[type="radio"][id="red"]:checked + label {
+  background-color:#E3483A;
+     color:white;
+}
+
+input[type="radio"][id="green"]:checked + label {
+  background-color:#51AE43;
+     color:white;
+}
+
+input[type="radio"][id="jaune"]:checked + label {
+  background-color:#EECB23;
+     color:white;
+}
+
+input[type="radio"][id="blue"]:checked + label {
+  background-color:#0E67AF;
+     color:white;
+}
+
+input[type="radio"][id="violet"]:checked + label {
+  background-color:#B567D6;
+    color:white;
+}
 
 /*********** FOOTER *************/
 
