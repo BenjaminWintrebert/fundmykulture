@@ -31,7 +31,7 @@ html{
 }
 
 body{
-    background: white;
+    background: rgb(244,242,243);
     font-family: "Century Gothic", sans-serif;
     height: calc(100% - 70px);
     margin-top: 38px;
@@ -328,3 +328,30 @@ canvas{
 .Autres {
 	border-color: #B971D8;
 }
+
+.content{
+    padding: 10px;
+    text-align: justify;
+}
+
+.content p{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.single-projet #container{
+
+}
+
+
+.coin-slider { overflow: hidden; zoom: 1; position: relative; }
+.coin-slider a{ text-decoration: none; outline: none; border: none; }
+
+.cs-buttons { font-size: 0px; padding: 10px; float: left; }
+.cs-buttons a { margin-left: 5px; height: 10px; width: 10px; float: left; border: 1px solid #B8C4CF; color: #B8C4CF; text-indent: -1000px; }
+.cs-active { background-color: #B8C4CF; color: #FFFFFF; }
+
+.cs-title { width: 545px; padding: 10px; background-color: #000000; color: #FFFFFF; }
+
+.cs-prev,
+.cs-next { background-color: #000000; color: #FFFFFF; padding: 0px 10px; }
