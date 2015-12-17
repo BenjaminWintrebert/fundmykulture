@@ -29,11 +29,14 @@
 				<form><span class="logo-search"></span><input type="text" class="fs-medium search" placeholder="Rechercher"></form>
             </div>
             <div class="col-50 t-right">
+
                 <?php if ( !is_user_logged_in() ) { ?> <span class="fs-medium ml20 mr20 login"><a href='<?php echo esc_url( home_url( "/wp-login.php" ) ); ?>'><span class="logo-login"></span>Se connecter</a></span> <?php }
 else{ ?>
+				<span class="fs-medium ml20 new login"><a href='<?php echo esc_url( home_url( "wp-admin/post-new.php?post_type=projet" ) ); ?>'><span class="logo-new"></span>Nouveau Projet</a></span>
                 <span class="fs-medium ml20 mr20 login"><a href='<?php echo wp_logout_url("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']); ?>'><span class="logo-login"></span>Se déconnecter</a></span>
                 <?php } ?>
             </div>
+			<a href='<?php echo esc_url( home_url( "wp-admin/post-new.php?post_type=projet" ) ); ?>' class="fs-medium new-mobile hidden login">Nouveau Projet</a>
         </header>
 
         <div id="content" class="site-content">

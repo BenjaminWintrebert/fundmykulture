@@ -154,6 +154,13 @@ input {
     margin-right: 5px;
 }
 
+.logo-new {
+    content: url(../fundmykulture/img/new.png);
+    width: 15px;
+    margin-bottom: -3px;
+    margin-right: 5px;
+}
+
 .brick {
     width:321px;
     margin: 0px 6px 11px 6px;
@@ -178,6 +185,10 @@ a:hover{
 
 .accueil:hover > span {
     content: url(../fundmykulture/img/home-hover.png);
+}
+
+.login:hover > a span.logo-new {
+    content: url(../fundmykulture/img/new-hover.png);
 }
 
 .login:hover > a span.logo-login {
@@ -509,74 +520,6 @@ canvas{
     transform: translateX(-50%);
 }
 
-.tab {
-  padding-top: 50px;
-  margin-bottom: 20px;
-  position: relative;
-  overflow: hidden;
-  background: #fff;
-  width: 70%;
-  margin: 0 auto;
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.5;
-  font-weight: 300;
-  color: #888;
-  -webkit-font-smoothing: antialiased;
-}
-
-.tabs {
-  display: table;
-  position: relative;
-  overflow: hidden;
-  margin: 0;
-  width: 100%;
-}
-.tabs li {
-  float: left;
-  line-height: 38px;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
-}
-.tabs a {
-  background-color: #eff0f2;
-  border-bottom: 1px solid #fff;
-  color: #888;
-  font-weight: 500;
-  display: block;
-  letter-spacing: 0;
-  outline: none;
-  padding: 0 20px;
-  text-decoration: none;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  border-bottom: 2px solid #87d3b7;
-}
-
-.tabs_item {
-  display: none;
-  padding: 30px 0;
-}
-.tabs_item h4 {
-  font-weight: bold;
-  color: #87d3b7;
-  font-size: 20px;
-}
-.tabs_item img {
-  width: 200px;
-  float: left;
-  margin-right: 30px;
-}
-.tabs_item:first-child {
-  display: block;
-}
-
-.current a {
-  color: #fff;
-  background: #87d3b7;
-}
-
 .single-projet h2 {
     border-bottom: 1px solid black;
     margin: 10px;
@@ -587,3 +530,61 @@ canvas{
     margin: 10px;
     margin-bottom: 40px;
 }
+
+@media screen and (max-width:1050px) {
+	label {
+		width: 20%;
+	}
+
+	#container {
+		width: initial;
+		margin-left: 150px;
+	}
+}
+
+@media screen and (max-width:880px) {
+	#container {
+		margin-left: 80px;
+	}
+
+	form {
+		display: none!important;
+	}
+
+	.new {
+		display: none;
+	}
+
+	.new-mobile {
+		display: block!important;
+		width: 100%;
+    	text-align: center;
+    	background-color: #8a5d41;
+		color:white;
+	}
+
+	.new-mobile:hover {
+    	background-color: black;
+		color:white!important;
+	}
+
+	body {
+		margin-top: 85px;
+	}
+
+}
+
+@media screen and (max-width:780px) {
+	#container {
+		margin-left: 80px;
+	}
+
+	.brick {
+		width: 90%;
+	}
+
+	.img-projet {
+		max-height: 400px;
+	}
+}
+
