@@ -82,22 +82,22 @@ else{
                 <div data-p="112.50" style="display: none;">
                     <img src="<?php echo $img; ?>" />
                 </div>
-                <?php if(isset($custom['image_additionnel_1'][0])) { ?>
+                <?php if(!empty($custom['image_additionnel_1'][0])) { ?>
                 <div data-p="112.50" style="display: none;">
                     <?php echo wp_get_attachment_image($custom['image_additionnel_1'][0], 'full'); ?>
                 </div>
                 <?php } ?>
-                <?php if(isset($custom['image_additionnel_2'][0])) { ?>
+                <?php if(!empty($custom['image_additionnel_2'][0])) { ?>
                 <div data-p="112.50" style="display: none;">
                     <?php echo wp_get_attachment_image($custom['image_additionnel_2'][0], 'full'); ?>
                 </div>
                 <?php } ?>
-                <?php if(isset($custom['image_additionnel_3'][0])) { ?>
+                <?php if(!empty($custom['image_additionnel_3'][0])) { ?>
                 <div data-p="112.50" style="display: none;">
                     <?php echo wp_get_attachment_image($custom['image_additionnel_3'][0], 'full'); ?>
                 </div>
                 <?php } ?>
-                <?php if(isset($custom['image_additionnel_4'][0])) { ?>
+                <?php if(!empty($custom['image_additionnel_4'][0])) { ?>
                 <div data-p="112.50" style="display: none;">
                     <?php echo wp_get_attachment_image($custom['image_additionnel_4'][0], 'full'); ?>
                 </div>
