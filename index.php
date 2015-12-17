@@ -17,8 +17,6 @@ $loop = new WP_Query( array(
             <div class="projet_container">
 				<figcaption>
 					<span>
-						<?php echo $custom['objectif'][0]; ?>
-						<?php echo $custom['fin_de_la_campagne'][0]; ?>
 						<?php the_title(); ?>
 					</span>
 				</figcaption>
