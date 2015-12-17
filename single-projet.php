@@ -57,7 +57,6 @@ $img = $img[0];
 
 
     <?php $custom = get_post_custom($post->ID); ?>
-    <?php var_dump($custom); ?>
     <?php $time=time(); $fin=strtotime($custom['fin_de_la_campagne'][0]);
 $restant=$time-$fin;
 if ($restant < 0)
@@ -80,6 +79,9 @@ else{
                 <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
             </div>
             <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden;">
+                <div data-p="112.50" style="display: none;">
+                    <img src="<?php echo $img; ?>" />
+                </div>
                 <div data-p="112.50" style="display: none;">
                     <?php if(isset($custom['image_additionnel_1'][0])) { ?>
                     <?php echo wp_get_attachment_image($custom['image_additionnel_1'][0], 'full'); ?>
